@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './App.css';
 
-class Home extends Component {
+class Home extends PureComponent {
   render() {
     return (
       <div className="home">

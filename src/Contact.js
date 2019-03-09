@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './App.css';
 
-class Contact extends Component {
+class Contact extends PureComponent {
+  static defaultProps = {name: "Kontakt"}
   render() {
     return (
       <div className="contact">

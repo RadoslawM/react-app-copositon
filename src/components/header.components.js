@@ -1,10 +1,21 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import '../App.css';
 
 class Header extends PureComponent {
     state = {
         isFixed: true,
     };
+    static propTypes = {
+          name: PropTypes.string.isRequired
+    };
+
+    static defaultProps = {
+       name: "Kontakt"
+    };
+
+
+
 
     componentDidMount(){
         window.addEventListener('scroll', this.handleHeaderPosition);
@@ -27,7 +38,7 @@ class Header extends PureComponent {
   render() {
     return (
       <div className={this.state.isFixed ? 'HeaderFixed' : 'Header'}>
-        <header>React aplication</header>
+        <header>Aplikacja{this.props.name}</header>
       </div>
     );
   }
