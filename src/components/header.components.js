@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import '../App.css';
 
-class Header extends Component {
+class Header extends PureComponent {
     state = {
         isFixed: true,
     };
@@ -27,7 +27,7 @@ class Header extends Component {
   render() {
     return (
       <div className={this.state.isFixed ? 'HeaderFixed' : 'Header'}>
-        React aplication
+        <header>React aplication</header>
       </div>
     );
   }
